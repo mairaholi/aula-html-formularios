@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+</head>
+<body>
+    
+    <!-- 1. Adicione os campos (inputs) em um formulário -->
+    <!-- Nota: O formulário deve enviar os dados para rota /autenticar -->
+    <!-- Nota: Utilize o método POST -->
+    <div><form
+        method="post"
+        action="http://127.0.0.1:3000/autenticar/">
+        <h1>Cadastre-se</h1>
+        <div>
+            <div>Nome completo</div>
+            <!-- 1.1. Adicione uma descrição no input utilizando placeholder -->
+            <input type="text"
+            placeholder="Digite seu nome completo">
+        </div>
+        <div>
+            <div>E-mail</div>
+            <!-- 1.1. Adicione uma descrição no input utilizando placeholder -->
+            <!-- 1.2. Altere o tipo para e-mail -->
+            <!-- 1.3. Define como campo obrigatório -->
+            <input type="email"
+            placeholder="Digite seu email"
+            required>
+        </div>
+        <div>
+            <div>Data de nascimento</div>
+            <!-- 1.3. Define como campo obrigatório -->
+            <!-- 1.1. Adicione uma descrição no input utilizando placeholder -->
+            <input type="date"
+            required>
+        </div>
+        <div>
+            <div>Gênero</div>
+            <select name="Genero" id="Genero">
+                <option selected disabled>Prefiro não informar</option>
+                <option value="0">Feminino</option>
+                <option value="1">Masculino</option>
+            </select>
+            <!-- Adicione um select para os valores Masculino, Feminino, Prefiro não informar -->
+            <!-- Nota: Valor padrão é Prefiro não informar -->
+            
+        </div>
+        <div>
+            <div>Qual seu nível de nível de conhecimento em programação?</div>
+            <div><input 
+                id="programacao" 
+                name="programacao" 
+                type="radio"
+                value="0"
+            >  <label for="programacao">Não tenho experiência prévia</label></input></div>
+            <div><input 
+                id="programacao" 
+                name="programacao" 
+                type="radio"
+                value="1"
+            >  <label for="programacao">Sou iniciante</label></input></div>
+            <div><input 
+                id="programacao" 
+                name="programacao" 
+                type="radio"
+                value="2"
+            >  <label for="programacao">Tenho experiência, estou em processo de especialização</label></input></div>
+            <!-- Adicione campos/inputs do tipo radio para agregar os valores 
+            
+                - Não tenho experiência prêvia
+                - Sou iniciante
+                - Tenho experiência, estou em processo de especialização
+            -->
+        </div>
+        <div>
+            <div>Senha</div>
+            <!-- 1.1. Adicione uma descrição no input utilizando placeholder -->
+            <!-- 1.3. Define como campo obrigatório -->
+            <!-- 1.4. Altere o tipo para password -->
+            <input type="password"
+            placeholder="Digite sua senha"
+            required>
+        </div>
+        <div>
+            <input 
+                id="oferta" 
+                name="oferta" 
+                type="checkbox"
+                value="oferta"
+            >
+            <label for="oferta">Deseja receber nossas ofertas mensalmente?</label>
+            <!-- 1.5. Adicione um checklist -->
+        </div>
+        <div>
+            <!-- 1.5. Configure o botão para enviar o formulário -->
+            <button type="submit">Cadastrar</button>
+        </div></form>
+    </div>
+
+</body>
+</html>
